@@ -1,0 +1,449 @@
+/*RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-family: 'Nunito Sans', sans-serif;
+	vertical-align: baseline;
+	text-decoration: none;
+	list-style: none;
+}
+/* HTML5 display-role reset para navegadores antiguos */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*ESTILO BASE DE NUESTRO SITIO*/
+*{
+	margin: 0;
+	padding: 0;
+	/*RESETEAR MODELO CAJA PARA CONTROLAR ANCHURA ELEMENTOS*/
+	box-sizing: border-box;
+	font-family: 'Nunito Sans', sans-serif;
+}
+/*ESTILO TIPOGRAFICOS*/
+
+h1{
+	font-weight: 800;
+	font-size: 5rem;
+	color:#E63D1E
+}
+
+h2{
+	font-weight: 700;
+	font-size: 4rem;
+	color:#E63D1E
+
+}
+
+h3 {
+	font-size: 2rem;
+	font-weight: 500;
+	color:#E63D1E
+
+	
+}
+
+h4 {
+	font-size: 1rem;
+	font-weight: 500;
+	
+
+}
+
+p{
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+
+/*ESTILO BODY*/
+
+body {
+	background-color: #FFB7C5;
+}
+
+/*ESTILO NAV*/
+
+nav{
+	grid-area: nav;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 5rem;
+	
+
+
+}
+
+.nav_logo{
+	margin: 1rem;
+	cursor: pointer;
+
+}
+
+.nav_links ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.nav_links li {
+	padding: 1rem;
+	font-weight: 700;
+	color:#E63D1E ;
+
+
+}
+
+.nav_links li a{
+	color:#E63D1E ;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+
+
+}
+
+.nav_links li a:hover {
+	color: #FFFFFF;
+
+
+}
+
+
+/*ESTILO MAIN*/
+
+
+main{
+	grid-area: main;
+	display: flex;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	padding: 0;
+
+	
+	
+
+}
+
+#content1{
+	grid-area: content1;
+	margin: auto;
+	margin-bottom: 1rem;
+
+}
+
+#content2{
+	grid-area: content2;
+	margin: auto;
+	margin-bottom: 1rem;
+
+}
+
+#content3{
+	grid-area: content3;
+	margin: auto;
+	margin-bottom: 1rem;
+
+}
+
+/*IMAGENES RESPONSIVE*/
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/*ESTILO CTA*/
+.CTA{
+
+	width: 300px;
+	height: auto;
+	padding: 0.5rem;
+	border: none;
+	color: #FFFFFF;
+	background-color: #E63D1E;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 0 #FFB7C5;
+	transition: ease-out 0.3s;
+	font-size: 1rem;
+	font-weight: 800;
+	outline: none;
+	margin: 2rem;
+
+}
+
+.CTA:hover{
+	color: #E63D1E;
+	box-shadow: inset 300px 0 0 0 #FFFFFF;
+}
+
+
+
+/*ESTILO FOOTER*/
+
+footer{
+
+	grid-area: footer;
+	padding: 20px;
+	width: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	background-color: #FFFFFF;
+	align-items: center;
+	justify-content: center;
+
+}
+
+/*ESTILO LOGOS*/
+
+.logo_redes{
+	width: 50px;
+	height: auto;
+	padding: 7px;
+	display: inline-flex;
+	cursor: pointer;
+
+}
+
+/*ESTILO SLIDER*/
+
+.slider{
+	
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+
+
+}
+
+.slider .CTA{
+	position: absolute;
+	top: 440px;
+	right: 28px;
+
+}
+
+
+/*GRIDS*/
+
+.container_index{
+	display: grid;
+	height: 100vh;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 0.2fr 1.5fr 1.2fr 5rem;
+	/*ESTRUCTURA GRID 3 COLUMNAS 4 FILAS*/
+	grid-template-areas:
+	"nav nav nav"
+	"main main main"
+	"content1 content2 content3"
+	"footer footer footer" ;
+	grid-gap: 0.2rem;
+
+	
+}
+
+
+
+.container_tiendas {
+	display: grid;
+	height: 100vh;
+	
+	grid-template-columns: 3fr;
+	grid-template-rows: 0.2fr 1fr 5rem;
+	/*ESTRUCTURA GRID 1 COLUMNAS 3 FILAS*/
+	grid-template-areas:
+	"nav"
+	"main"
+	"footer" ;
+	
+
+}
+
+
+
+/*ESTILO TILES CONTENIDO*/
+
+.tile{
+	position: relative;
+
+}
+
+.tile> * {
+    border-radius: 5%;
+} 
+
+.tile_text{
+	font-size: 2rem;
+	font-weight: 700;
+	color: #FFFFFF;
+} 
+
+.tile_overlay {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s;
+}
+
+.tile_overlay:hover{
+	opacity: 1;
+}
+
+/*PARA ANIMAR TEXTO TILE el > * significa que aplica a todos los child*/
+
+.tile_overlay> * {
+    transform: translateY(20px);
+    transition: transform 0.25s;
+}
+
+.tile_overlay:hover> * {
+    transform: translateY(0);
+}
+
+/*ESTILO PAGINA TIENDAS*/
+.mapa {
+	background-color: #FFFFFF;
+	
+	display: grid;
+	
+	grid-template-columns: 1fr 2fr;
+	grid-template-rows: 550px;
+	/*ESTRUCTURA GRID 2 COLUMNAS 1ROW*/
+	grid-template-areas: "mapa_ubicacion mapa_direcciones" ;
+	padding: 2rem;
+	margin: auto;
+	justify-items: center;
+	align-items: center;
+
+}
+.mapa_ubicacion {
+	grid-area: mapa_ubicacion;
+	
+	
+
+}
+
+.mapa_direcciones{
+	grid-area: mapa_direcciones;
+	align-items: center;
+	display: flex;
+	justify-content: left;
+	
+}
+
+
+/*GRIDS RESPONSIVE PARA MOVIL*/
+
+@media only screen and (max-width: 768px) {
+
+	.container_index{
+		grid-template-columns: 1fr;
+		grid-template-rows: 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr 1fr;
+		grid-template-areas: 
+		"nav"
+		"main"
+		"content1"
+		"content2"
+		"content3"
+		"footer";
+
+	}
+
+	nav{
+	grid-area: nav;
+	display: block;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0;
+	
+	
+	}
+
+	.nav_logo{
+	position: relative;
+	margin: 1rem;
+	padding: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
+
+	}
+
+	.nav_links ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	}
+
+	.tile{
+	position: relative;
+	margin: 1rem;
+	padding: 1rem;
+
+
+	}
+
+	.container_tiendas {
+	grid-template-columns: 1fr;
+		grid-template-rows: 0.4fr 2.2fr 1fr;
+		grid-template-areas: 
+		"nav"
+		"main"
+		"footer";
+
+	}
+
+	
+
+}
